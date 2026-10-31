@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "verilog-2001-lint"
+version = "1.0.0"
+description = "Verilog-2001 & FPGA Linter aligned with Google's Verilog Style Guide. Checks both Verilog code and testbench (tb)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Gabriel", email = "gabrielagra@usp.br" }
+]
+keywords = [
+    "verilog",
+    "verilog-2001",
+    "verilog-2005",
+    "hdl",
+    "fpga",
+    "fpga-development",
+    "fpga-programming",
+    "fpga-verilog",
+    "linter",
+    "static-analysis",
+    "cyclone-v",
+    "intel-quartus",
+    "intel-quartus-prime",
+    "verilog-testbenches",
+    "verilog-linter",
+    "eda",
+    "hardware-design",
+    "google-style-guide",
+    "llm",
+    "ai-hardware-engineering"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+dependencies = [
+    "tomli>=1.1.0; python_version < '3.11'",
+]
+
+[project.scripts]
+v2001-lint = "verilog2001_lint.cli:main"
+verilog-2001-lint = "verilog2001_lint.cli:main"
+verilog-lint = "verilog2001_lint.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gabrielGAGRA/verilog-2001-lint"
+Repository = "https://github.com/gabrielGAGRA/verilog-2001-lint.git"
+Documentation = "https://github.com/gabrielGAGRA/verilog-2001-lint/tree/main/llm-docs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/verilog2001_lint"]

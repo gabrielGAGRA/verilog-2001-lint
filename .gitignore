@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# EDA & Simulation artifacts
+*.vvp
+*.vcd
+work/
+transcript
+*.qpf
+*.qsf
+*.sof
+*.pof
+
+# IDE
+.vscode/
+.idea/
+*.swp
